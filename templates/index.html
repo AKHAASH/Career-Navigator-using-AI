@@ -4,23 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Navigator</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center">AI-Driven Career Navigator</h1>
-        <p class="text-center">Enter your skills to find your ideal career!</p>
-        <form method="POST" action="{{ url_for('recommend') }}">
-            <div class="mb-3">
-                <label for="skills" class="form-label">Your Skills (comma-separated):</label>
-                <input type="text" class="form-control" id="skills" name="skills" placeholder="e.g., Python, ML, Leadership">
-            </div>
-            {% if error %}
-                <div class="alert alert-danger">{{ error }}</div>
-            {% endif %}
-            <button type="submit" class="btn btn-primary w-100">Find Careers</button>
-        </form>
-    </div>
+    <h1>Career Navigator</h1>
+    <form action="/result" method="post">
+        <label for="skills">Enter your skills (comma-separated):</label><br>
+        <input type="text" id="skills" name="skills" placeholder="e.g., Python, Data Analysis, ML"><br><br>
+        <button type="submit">Find Careers</button>
+    </form>
 </body>
 </html>
