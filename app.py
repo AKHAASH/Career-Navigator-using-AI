@@ -18,6 +18,20 @@ app = Flask(__name__)
 vectorizer = TfidfVectorizer()
 tfidf_matrix = vectorizer.fit_transform(career_data['skills_processed'])
 
+# Function to find missing skills (with exact skill matching)
+def find_missing_skills(user_skills, career_skills):
+    # Split user skills into list of skills
+    user_skills_list = set(user_skills.split(','))
+    
+    # Extract career's required skills as a set
+    career_skills_list = set(career_skills.split(' '))
+
+    # Find missing skills (those in career's skills but not in user's skills)
+    missing_skills = career_skills_list - user_skills_list
+
+    # Return missing skills as a list
+    return list(missing_skills)
+
 # Function to predict match percentage
 def predict_career_match(user_skills):
     user_skills_processed = ' '.join(user_skills.replace("'", "").split(" "))
@@ -26,12 +40,23 @@ def predict_career_match(user_skills):
 
     recommendations = []
     for i, score in enumerate(similarity_scores):
-        if score > 0:  # Only include careers with some match
-            recommendations.append({
-                "career": career_data.iloc[i]['career'],
-                "description": career_data.iloc[i]['description'],
-                "match_score": round(score * 100, 2)  # Convert to percentage
-            })
+        # Skip careers with 0% match
+        if score == 0:
+            continue
+        
+        career = career_data.iloc[i]
+        missing_skills = find_missing_skills(user_skills, career['skills_processed'])
+        
+        # Avoid displaying missing skills if the match is 100%
+        if score == 1.0:
+            missing_skills = set()  # No missing skills for 100% match
+            
+        recommendations.append({
+            "career": career['career'],
+            "description": career['description'],
+            "match_score": round(score * 100, 2),  # Convert to percentage
+            "missing_skills": list(missing_skills)  # Ensure it is a list
+        })
 
     # Sort by match score (highest first)
     recommendations = sorted(recommendations, key=lambda x: x['match_score'], reverse=True)

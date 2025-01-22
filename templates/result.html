@@ -13,7 +13,17 @@
         {% for recommendation in recommendations %}
             <li>
                 <strong>{{ recommendation.career }}</strong> - {{ recommendation.match_score }}% match<br>
-                {{ recommendation.description }}
+                {{ recommendation.description }}<br>
+                
+                {% if recommendation.missing_skills %}
+                    <p><strong>Missing Skills:</strong>
+                    {% for skill in recommendation.missing_skills %}
+                        <span style="color: red;">{{ skill }}</span>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    </p>
+                {% else %}
+                    <p><strong>Skills Complete!</strong></p>
+                {% endif %}
             </li>
         {% endfor %}
         </ul>
