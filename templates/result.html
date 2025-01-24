@@ -5,35 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Recommendations</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Recommended Careers</h1>
-    {% if recommendations %}
-        <ul>
-        {% for recommendation in recommendations %}
-            {% if recommendation.match_score != 0 %}
-                <li>
-                    <strong>{{ recommendation.career }}</strong> - {{ recommendation.match_score }}% match<br>
-                    {{ recommendation.description }}<br>
-                    
-                    {% if recommendation.missing_skills %}
-                        <p><strong>Missing Skills:</strong>
-                            {% for skill in recommendation.missing_skills %}
-                                <a href="{{ skills_with_urls[skill] }}" target="_blank" style="color: red; display: inline;">
-                                    {{ skill }}
-                                </a>{% if not loop.last %}, {% endif %}
-                            {% endfor %}                    
-                        </p>
-                    {% else %}
-                        <p><strong>Skills Complete!</strong></p>
+    <div class="container">
+        <header>
+            <h1>Recommended Careers</h1>
+            <p>Discover careers that match your skills and interests.</p>
+        </header>
+        <main>
+            {% if recommendations %}
+                <ul class="recommendation-list">
+                {% for recommendation in recommendations %}
+                    {% if recommendation.match_score != 0 %}
+                        <li>
+                            <h2>{{ recommendation.career }} - <span class="match-score">{{ recommendation.match_score }}% match</span></h2>
+                            <p class="description">{{ recommendation.description }}</p>
+                            {% if recommendation.missing_skills %}
+                                <p><strong>Missing Skills:</strong>
+                                    {% for skill in recommendation.missing_skills %}
+                                        <a href="{{ skills_with_urls[skill] }}" target="_blank" class="skill-link">
+                                            {{ skill }}
+                                        </a>{% if not loop.last %}, {% endif %}
+                                    {% endfor %}
+                                </p>
+                            {% else %}
+                                <p><strong>Skills Complete!</strong></p>
+                            {% endif %}
+                        </li>
                     {% endif %}
-                </li>
+                {% endfor %}
+                </ul>
+            {% else %}
+                <p class="no-results">No careers found matching your skills.</p>
             {% endif %}
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No careers found matching your skills.</p>
-    {% endif %}
-    <a href="/">Go back</a>
+            <a href="/" class="back-link">Go back</a>
+        </main>
+    </div>
 </body>
 </html>

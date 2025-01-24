@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Navigator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Career Navigator</h1>
-    <form action="/result" method="post">
-        <label for="skills">Enter your skills (comma-separated):</label><br>
-        <input type="text" id="skills" name="skills" placeholder="e.g., Python, Data Analysis, ML"><br><br>
-        <button type="submit">Find Careers</button>
-    </form>
+    <div class="container">
+        <header>
+            <h1>Career Navigator</h1>
+            <p>Your personalized guide to finding the perfect career path.</p>
+        </header>
+        <main>
+            <form action="/result" method="post">
+                <label for="skills">Enter your skills (comma-separated):</label>
+                <input type="text" id="skills" name="skills" placeholder="e.g., Python, Data Analysis, ML">
+                <button type="submit">Find Careers</button>
+            </form>
+        </main>
+    </div>
 </body>
 </html>

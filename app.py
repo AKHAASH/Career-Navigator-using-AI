@@ -70,6 +70,7 @@ skills_with_urls = {
     'Big Data': 'https://www.edx.org/professional-certificate/big-data-for-data-engineering',
     'Hadoop': 'https://hadoop.apache.org/docs/',
     'TensorFlow': 'https://www.tensorflow.org/learn',
+    'Math': 'https://www.youtube.com/@AlexMathsEngineering',
     'PyTorch': 'https://pytorch.org/tutorials/',
     'Recruitment': 'https://www.linkedin.com/learning/',
     'Training': 'https://www.trainup.com/',

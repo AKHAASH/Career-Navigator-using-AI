@@ -1,100 +1,159 @@
-/* Reset some default styling */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Fonts and Body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
     color: #333;
+    line-height: 1.6;
     padding: 20px;
 }
 
-/* Header styling */
-h1 {
-    color: #2e3a59;
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+}
+
+/* Header Styling */
+header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Form container */
+header h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+header p {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+/* Form Styling */
 form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #34495e;
 }
 
 input[type="text"] {
     width: 100%;
     padding: 12px;
-    margin: 8px 0;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #34495e;
 }
 
 button {
-    width: 100%;
     padding: 12px;
-    background-color: #5C6BC0;
+    background-color: #3498db;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease-in-out;
 }
 
 button:hover {
-    background-color: #3f51b5;
+    background-color: #2980b9;
 }
 
-/* Results section */
-ul {
-    list-style-type: none;
+/* Recommendation List */
+.recommendation-list {
+    list-style: none;
+    margin: 20px 0;
     padding: 0;
 }
 
-li {
-    background-color: #ffffff;
-    padding: 15px;
+.recommendation-list li {
+    background-color: #ecf0f1;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-list h2 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.match-score {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 1rem;
+    color: #7f8c8d;
     margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-strong {
-    font-size: 18px;
-    color: #3f51b5;
-}
-
-a {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    color: #5C6BC0;
+.skill-link {
+    color: #3498db;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: 500;
+}
+
+.skill-link:hover {
+    text-decoration: underline;
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
     margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
-a:hover {
-    color: #3f51b5;
+.back-link:hover {
+    text-decoration: underline;
 }
 
-/* For smaller screens */
+/* No Results */
+.no-results {
+    color: #e74c3c;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Media Queries */
 @media (max-width: 600px) {
-    form {
-        width: 90%;
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
     }
 
     button {
-        font-size: 14px;
+        font-size: 0.9rem;
     }
 }
