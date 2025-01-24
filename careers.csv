@@ -1,0 +1,42 @@
+career,skills,description
+Data Scientist,'Python' 'ML' 'Data Analysis' 'Statistics',Analyze data and build predictive models.
+AI Engineer,'Python' 'AI' 'Deep Learning' 'NLP',Develop AI systems to solve real-world problems.
+Web Developer,'HTML' 'CSS' 'JavaScript' 'React',Build and maintain websites and web applications.
+Product Manager,'Leadership' 'Planning' 'Communication',Lead product development and strategy.
+Software Engineer,'Python' 'Java' 'C++' 'Problem Solving',Develop and test software applications.
+Graphic Designer,'Creativity' 'Photoshop' 'Illustrator' 'UX',Design visual content for branding and communication.
+Business Analyst,'Excel' 'Data Analysis' 'Communication' 'Problem Solving',Analyze business processes and suggest improvements.
+Cybersecurity Analyst,'Networking' 'Security' 'Problem Solving' 'Risk Management',Ensure the security of systems and networks.
+Cloud Architect,'AWS' 'Azure' 'GCP' 'Networking',Design and manage cloud infrastructure and services.
+DevOps Engineer,'CI/CD' 'Docker' 'Kubernetes' 'Linux',Automate and manage infrastructure and deployment pipelines.
+Mechanical Engineer,'CAD' 'SolidWorks' 'Thermodynamics' 'Material Science',Design and analyze mechanical systems and components.
+Civil Engineer,'AutoCAD' 'Structural Analysis' 'Construction' 'Project Management',Plan and oversee construction and infrastructure projects.
+Digital Marketer,'SEO' 'Content Creation' 'Analytics' 'Social Media',Create and manage online marketing campaigns.
+Game Developer,'Unity' 'Unreal Engine' 'C#' '3D Modeling',Design and develop video games and interactive experiences.
+Mobile App Developer,'Android' 'iOS' 'React Native' 'Flutter',Build and maintain mobile applications for Android and iOS.
+Data Engineer,'SQL' 'ETL' 'Big Data' 'Hadoop',Design and maintain scalable data pipelines and storage solutions.
+Machine Learning Engineer,'Python' 'TensorFlow' 'PyTorch' 'Data Analysis',Develop and deploy machine learning models.
+Human Resources Manager,'Recruitment' 'Training' 'Employee Engagement' 'Conflict Resolution',Manage and develop company workforce strategies.
+Content Writer,'Writing' 'Editing' 'SEO' 'Research',Create written content for websites blogs and publications.
+Video Editor,'Adobe Premiere' 'Final Cut Pro' 'Storyboarding' 'Editing',Edit and produce video content for various media platforms.
+Accountant,'Accounting' 'Taxation' 'Excel' 'Financial Analysis',Manage financial records and prepare tax reports.
+Teacher,'Lesson Planning' 'Teaching' 'Mentoring' 'Communication',Educate and mentor students in various subjects.
+UI/UX Designer,'Wireframing' 'Prototyping' 'User Research' 'Creativity',Design user-friendly interfaces and improve user experiences.
+Biologist,'Research' 'Lab Techniques' 'Data Analysis' 'Field Work',Study living organisms and their environments.
+Pharmacist,'Pharmacology' 'Medicine' 'Customer Service' 'Inventory Management',Dispense medications and advise on their use.
+Lawyer,'Legal Research' 'Contracts' 'Negotiation' 'Litigation',Provide legal advice and represent clients in court.
+Chef,'Cooking' 'Food Preparation' 'Menu Planning' 'Creativity',Prepare meals and manage kitchen operations.
+Photographer,'Photography' 'Editing' 'Lighting' 'Creativity',Capture and edit photographs for various purposes.
+Social Worker,'Counseling' 'Empathy' 'Case Management' 'Advocacy',Support individuals and families in need of assistance.
+Event Planner,'Organization' 'Budgeting' 'Negotiation' 'Creativity',Plan and coordinate events such as weddings and conferences.
+Architect,'Design' 'AutoCAD' 'SketchUp' 'Creativity',Design and plan buildings and structures.
+Electrician,'Wiring' 'Troubleshooting' 'Blueprint Reading' 'Safety',Install and maintain electrical systems in buildings.
+Plumber,'Piping' 'Repairs' 'Troubleshooting' 'Safety',Install and repair water and drainage systems.
+Nurse,'Patient Care' 'Critical Thinking' 'Medical Knowledge' 'Empathy',Provide healthcare and support to patients.
+Doctor,'Diagnosis' 'Treatment' 'Medical Knowledge' 'Empathy',Diagnose and treat illnesses and injuries.
+Pilot,'Navigation' 'Communication' 'Flight Planning' 'Safety',Fly and navigate aircraft safely.
+Entrepreneur,'Business Strategy' 'Leadership' 'Marketing' 'Finance',Start and manage businesses or ventures.
+Economist,'Economic Research' 'Data Analysis' 'Forecasting' 'Policy Making',Study economic trends and create forecasts.
+Librarian,'Cataloging' 'Research' 'Organization' 'Customer Service',Manage library collections and assist patrons.
+Scientist,'Research' 'Data Collection' 'Analysis' 'Writing',Conduct experiments and expand knowledge in specific fields.
+Astronomer,'Physics' 'Math' 'Research' 'Data Analysis',Study celestial bodies and phenomena.

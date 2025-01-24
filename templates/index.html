@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Navigator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Career Navigator</h1>
+    <form action="/result" method="post">
+        <label for="skills">Enter your skills (comma-separated):</label><br>
+        <input type="text" id="skills" name="skills" placeholder="e.g., Python, Data Analysis, ML"><br><br>
+        <button type="submit">Find Careers</button>
+    </form>
+</body>
+</html>

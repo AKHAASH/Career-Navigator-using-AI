@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Recommended Careers</h1>
+    {% if recommendations %}
+        <ul>
+        {% for recommendation in recommendations %}
+            {% if recommendation.match_score != 0 %}
+                <li>
+                    <strong>{{ recommendation.career }}</strong> - {{ recommendation.match_score }}% match<br>
+                    {{ recommendation.description }}<br>
+                    
+                    {% if recommendation.missing_skills %}
+                        <p><strong>Missing Skills:</strong>
+                            {% for skill in recommendation.missing_skills %}
+                                <a href="{{ skills_with_urls[skill] }}" target="_blank" style="color: red; display: inline;">
+                                    {{ skill }}
+                                </a>{% if not loop.last %}, {% endif %}
+                            {% endfor %}                    
+                        </p>
+                    {% else %}
+                        <p><strong>Skills Complete!</strong></p>
+                    {% endif %}
+                </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No careers found matching your skills.</p>
+    {% endif %}
+    <a href="/">Go back</a>
+</body>
+</html>
