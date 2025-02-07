@@ -1,5 +1,5 @@
 import pandas as pd
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
@@ -11,6 +11,13 @@ career_data = pd.read_csv('careers.csv')
 career_data['skills_processed'] = career_data['skills'].apply(
     lambda x: ' '.join(x.replace("'", "").split(" "))
 )
+
+login_details = [
+    {
+        'username' : 'admin',
+        'password' : '12345'
+    }
+]
 
 
 skills_with_urls = {
@@ -150,6 +157,10 @@ def predict_career_match(user_skills):
 # Flask Routes
 @app.route('/')
 def home():
+    return render_template('login.html')
+
+@app.route('/index', methods = ['POST', 'GET'])
+def index():
     return render_template('index.html')
 
 @app.route('/result', methods=['POST'])
